@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Paintbrush } from "lucide-react"; // Import Paintbrush icon
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,9 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white shadow-md relative">
       <div className="container mx-auto flex items-center justify-between p-4">
-        <Link to="/" className="text-2xl font-bold text-white">
+        {/* Logo with Paintbrush Icon */}
+        <Link to="/" className="text-2xl font-bold text-white flex items-center">
+          <Paintbrush size={28} className="mr-2 text-yellow-400" /> {/* Paintbrush Icon */}
           SAI ARTS
         </Link>
 

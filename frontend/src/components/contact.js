@@ -8,7 +8,7 @@ function ContactInfo() {
         <img className='animate-pulse w-8 h-8' src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"  />
         {/* <span>WhatsApp</span> */}
       </a>
-      <a href="tel:+YOUR_PHONE_NUMBER" className="flex items-center space-x-2">
+      <a href="tel:+919526612042" className="flex items-center space-x-2">
         <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone" className="w-6 h-6" />
         {/* <span>+YOUR_PHONE_NUMBER</span> */}
       </a>

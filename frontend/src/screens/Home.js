@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import CustomerFeedbackCarousel from '../components/customerFeedback';
 import MobileFeedbackCarousel from '../components/customerFeedbackM';
 import CustomPrintSteps from '../components/PriceFeature';
+import ContactSection from '../components/ContactUs';
+import { services } from '../Data/service';
+import OurService from '../components/OurService';
 
 const HomeScreen = () => {
 
@@ -51,6 +54,11 @@ const HomeScreen = () => {
 
   return (
     <div className="min-h-screen" ref={containerRef}>
+
+<OurService/>
+
+
+     
   
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,40 +90,6 @@ const HomeScreen = () => {
           </div>
         </div>
       </div>
-
-    
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 fade-in">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Custom Designs", description: "Get a unique design created just for you" },
-              { title: "Vehicle Wraps", description: "Full and partial wraps for all vehicle types" },
-              { title: "Business Branding", description: "Consistent branding across all your materials" }
-            ].map((service, index) => (
-              <div 
-                key={index} 
-                className="p-8 border border-gray-200 rounded-xl hover:border-indigo-500 transition duration-300 fade-in"
-                style={{ transitionDelay: `${0.1 * index}s` }}
-              >
-                <div className="h-16 w-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      
-      <div className='my-10 hidden lg:block'>   <CustomerFeedbackCarousel/></div>
-      <div className='my-10 lg:hidden'>   <MobileFeedbackCarousel/></div>
-   
-
-      
       <div className="py-20 bg-[#1E3A8A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6 fade-in">Ready to Transform Your Look?</h2>
@@ -127,7 +101,18 @@ const HomeScreen = () => {
           </button>
         </div>
       </div>
+
+    
+ 
+      
+      <div className='my-10 hidden lg:block'>   <CustomerFeedbackCarousel/></div>
+      <div className='my-10 lg:hidden'>   <MobileFeedbackCarousel/></div>
+   
+
+      
+     
       <CustomPrintSteps/>
+      <ContactSection/>
 
    
       <footer className="bg-gray-900 text-white py-12">
@@ -149,10 +134,11 @@ const HomeScreen = () => {
             <div>
               <h4 className="text-lg font-medium mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>123 Art Street</li>
-                <li>Design City, DC 12345</li>
-                <li>contact@saiarts.com</li>
-                <li>456-7890</li>
+                <li> 03 Kuvepu Layout 3rd Cross, Muddinapalya Rd, Bengaluru, Karnataka 560072</li>
+                <li>+919686456014</li>
+               
+
+               
               </ul>
             </div>
             <div>
