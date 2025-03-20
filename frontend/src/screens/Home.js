@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import CustomerFeedbackCarousel from '../components/customerFeedback';
+import MobileFeedbackCarousel from '../components/customerFeedbackM';
+import CustomPrintSteps from '../components/PriceFeature';
 
 const HomeScreen = () => {
 
@@ -66,7 +68,7 @@ const HomeScreen = () => {
   >
   </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Custom Design {item}</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Card {item}</h3>
                   <p className="text-gray-600 mb-4">High-quality vinyl sticker with weather-resistant finish.</p>
                   <div className="flex justify-between items-center">
                    
@@ -109,11 +111,12 @@ const HomeScreen = () => {
         </div>
       </div>
       
-      <div className='my-10'>   <CustomerFeedbackCarousel/></div>
+      <div className='my-10 hidden lg:block'>   <CustomerFeedbackCarousel/></div>
+      <div className='my-10 lg:hidden'>   <MobileFeedbackCarousel/></div>
    
 
       
-      <div className="py-20 bg-indigo-600">
+      <div className="py-20 bg-[#1E3A8A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6 fade-in">Ready to Transform Your Look?</h2>
           <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto fade-in" style={{ transitionDelay: '0.2s' }}>
@@ -124,6 +127,7 @@ const HomeScreen = () => {
           </button>
         </div>
       </div>
+      <CustomPrintSteps/>
 
    
       <footer className="bg-gray-900 text-white py-12">

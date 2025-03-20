@@ -6,18 +6,14 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const feedbacks = [
-  { name: "Alice Johnson", location: "New York, USA", review: "Amazing service! Highly recommend." },
-  { name: "Michael Smith", location: "Los Angeles, USA", review: "Great experience, very professional." },
-  { name: "Emily Davis", location: "Chicago, USA", review: "Loved it! Will use again for sure." },
-  { name: "John Doe", location: "Houston, USA", review: "Satisfied with the quality and support." },
-  { name: "Jane Williams", location: "Phoenix, USA", review: "Exceptional service and fast delivery!" },
-  { name: "David Brown", location: "Philadelphia, USA", review: "Very reliable and trustworthy." },
-  { name: "Sophia Miller", location: "San Antonio, USA", review: "Great prices and excellent customer support." },
-  { name: "Daniel Wilson", location: "San Diego, USA", review: "Smooth process and user-friendly website." },
-  { name: "Alice Johnson", location: "New York, USA", review: "Amazing service! Highly recommend." },
-  { name: "Michael Smith", location: "Los Angeles, USA", review: "Great experience, very professional." },
-  { name: "Emily Davis", location: "Chicago, USA", review: "Loved it! Will use again for sure." },
-  { name: "John Doe", location: "Houston, USA", review: "Satisfied with the quality and support." },
+  { name: "Ravi Kumar", location: "Koramangala, Bangalore", review: "Amazing service! Highly recommend." },
+  { name: "Priya Sharma", location: "Indiranagar, Bangalore", review: "Great experience, very professional." },
+  { name: "Ananya Rao", location: "Whitefield, Bangalore", review: "Loved it! Will use again for sure." },
+  { name: "Manoj Shetty", location: "Jayanagar, Bangalore", review: "Satisfied with the quality and support." },
+  { name: "Sneha Patil", location: "MG Road, Bangalore", review: "Exceptional service and fast delivery!" },
+  { name: "Vikram Gowda", location: "Electronic City, Bangalore", review: "Very reliable and trustworthy." },
+  { name: "Karthik Reddy", location: "Rajajinagar, Bangalore", review: "Great prices and excellent customer support." },
+  { name: "Meera Nair", location: "Malleshwaram, Bangalore", review: "Smooth process and user-friendly website." }
 ];
 
 const getRandomColor = () => {
@@ -27,7 +23,7 @@ const getRandomColor = () => {
 
 const CustomerFeedbackCarousel = () => {
   return (
-    <div className="w-4/5 mx-auto py-10">
+    <div className="w-4/5 select-none mx-auto py-10">
       <h2 className="text-2xl font-semibold text-center mb-6">Customer Feedback</h2>
       <Swiper
         modules={[Pagination, Navigation, Autoplay]}
@@ -39,7 +35,7 @@ const CustomerFeedbackCarousel = () => {
         className="w-full p-6 bg-white  rounded-lg"
       >
         {feedbacks.map((feedback, index) => (
-          <SwiperSlide key={index} className="flex flex-col items-center justify-center text-center p-4 border rounded-lg shadow w-[250px] h-[200px]">
+          <SwiperSlide key={index} className="flex flex-col items-center justify-center p-4 border rounded-lg shadow w-[250px] h-[200px]">
             <div className={`w-16 h-16 flex items-center justify-center text-white text-xl font-bold rounded-full ${getRandomColor()}`}>
               {feedback.name.charAt(0)}
             </div>
