@@ -167,6 +167,7 @@ const HomeScreen = () => {
           <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
             <p>©<span>SAI ARTS</span> </p>
            <a href='https://www.google.com'><p>Hireus</p></a> 
+           <p>hireusofficial@gmail.com</p>
           </div>
         </div>
       </footer>
