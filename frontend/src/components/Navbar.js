@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Paintbrush } from "lucide-react"; // Import Paintbrush icon
-
+import { Menu, X, ChevronDown, Paintbrush ,TreePalmIcon} from "lucide-react"; // Import Paintbrush icon
+import logo from '../Data/sailogo.png'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServiceOpen, setIsServiceOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 text-white shadow-md relative">
+    <nav className="bg-red-500 text-white shadow-md relative">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo with Paintbrush Icon */}
-        <Link to="/" className="text-2xl font-bold text-white flex items-center">
-          <Paintbrush size={28} className="mr-2 text-yellow-400" /> {/* Paintbrush Icon */}
+        <Link to="/" className="text-2xl font-bold text-white flex gap-2 items-center">
+        {/* <TreePalmIcon size={28} className="mr-2 text-white-600" />  */}
+        <img src={logo} alt="logo" className="w-10 "></img>
           SAI ARTS
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden items-center md:flex space-x-6">
           <Link to="/" className="hover:text-yellow-400 transition">Home</Link>
           <Link to="/products" className="hover:text-yellow-400 transition">Products</Link>
 
@@ -44,6 +45,16 @@ const Navbar = () => {
 
           <Link to="/works" className="hover:text-yellow-400 transition">Works</Link>
           <Link to="/feedback" className="hover:text-yellow-400 transition">Feedback</Link>
+
+          <Link to='/register'>
+          <div className=" flex flex-row px-10 items-center gap-2">
+          <p className="font-bold">Sojan</p>
+          <img className="w-10 h-auto rounded-xl" alt="profile" src="https://images.pexels.com/photos/14653174/pexels-photo-14653174.jpeg"></img>
+
+          </div>
+          </Link>
+        
+         
         </div>
 
         {/* Mobile Menu Button */}

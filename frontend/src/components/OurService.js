@@ -18,7 +18,7 @@ const OurService = () => {
               {services.map((service, index) => (
                 <li
                   key={index}
-                  className={`p-4 cursor-pointer rounded-lg transition duration-300 ${
+                  className={`lg:p-4 p-1 cursor-pointer rounded-lg transition duration-300 ${
                     selectedService.title === service.title
                       ? "bg-indigo-200 text-black"
                       : "bg-gray-100 hover:bg-gray-200"

@@ -55,14 +55,7 @@ export const services = [
             "https://www.arcprint.in/assets/media/products_common_imgs/matte-visiting-cards/1.webp?ver=4.7.9"
         ]
     },
-    {
-        title: "Bill Books",
-        description: "Custom bill books designed for businesses and organizations.",
-        images: [
-            "https://botaksign-library.s3.ap-southeast-1.amazonaws.com/2022/05/nric_bill_books__receipt_books_v1.jpg",
-            "https://files.inkmonk.com/site/20220329_232311092131_ad5138_Duplicate12.jpg"
-        ]
-    },
+   
     {
         title: "Eco Solvent Vinyl",
         description: "High-quality eco-solvent vinyl printing for durable applications.",
@@ -71,4 +64,5 @@ export const services = [
             "https://sonuartsprint.com/wp-content/uploads/2020/03/vinyl-prints-500x500-1.webp"
         ]
     }
+    
 ];

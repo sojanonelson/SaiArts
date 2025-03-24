@@ -11,18 +11,14 @@ const HomeScreen = () => {
   const containerRef = useRef(null);
   const featured = [
     {
-        description:"High-quality vinyl sticker with weather-resistant finish1."
-
+      description: "High-quality vinyl sticker with weather-resistant finish1.",
+      imageUrl: "https://i.ibb.co/kgn5WT6g/3d.jpg",
     },
     {
-        description:"High-quality vinyl sticker with weather-resistant finish2."
-
-    },
-    {
-        description:"High-quality vinyl sticker with weather-resistant finish3."
-
-    },
-  ]
+      description: "High-quality vinyl sticker with weather-resistant finish2.",
+      imageUrl: "https://via.placeholder.com/300", // Placeholder for missing image
+    }
+  ];
 
 
   // Scroll animation
@@ -60,28 +56,31 @@ const HomeScreen = () => {
 
      
   
-      <div className="py-20 bg-gray-50">
+<div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 fade-in">Featured Designs</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 fade-in">
+            Featured Designs
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div 
-                key={item} 
+            {featured.map((item, index) => (
+              <div
+                key={index}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover-card fade-in"
-                style={{ transitionDelay: `${0.1 * item}s` }}
+                style={{ transitionDelay: `${0.1 * index}s` }}
               >
-                <div 
-    className="h-64 bg-cover bg-center"
-    style={{ backgroundImage: "url('https://motorik.in/cdn/shop/files/WHITECELERIOSMILEY_5b7819c4-dd2c-4470-8430-02159bce95ae.jpg')" }}
-  >
-  </div>
+                <div
+                  className="h-64 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${item.imageUrl})` }}
+                ></div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Card {item}</h3>
-                  <p className="text-gray-600 mb-4">High-quality vinyl sticker with weather-resistant finish.</p>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                    Product {index + 1}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{item.description}</p>
+                  <p className="text-gray-600 mb-4">Min 2 years of warranty</p>
                   <div className="flex justify-between items-center">
-                   
                     <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">
-                      contact
+                      ORDER
                     </button>
                   </div>
                 </div>
@@ -120,7 +119,7 @@ const HomeScreen = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">Sai Arts</h3>
-              <p className="text-gray-400">Custom sticker art for every surface.</p>
+              <p className="text-gray-400">Custom Sticker and Sign Board for every surface.</p>
             </div>
             <div>
               <h4 className="text-lg font-medium mb-4">Quick Links</h4>
@@ -166,7 +165,8 @@ const HomeScreen = () => {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>© 2025 SAI ARTS</p>
+            <p>©<span>SAI ARTS</span> </p>
+            <p>Developed By Anand , Sojan</p>
           </div>
         </div>
       </footer>

@@ -8,6 +8,8 @@ import FeedbackScreen from './screens/Feedback';
 
 import Navbar from './components/Navbar';
 import ContactInfo from './components/contact';
+import Register from './screens/Register';
+import Login from './screens/Login';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <ContactInfo/>
       <Routes>
         <Route path="/" element={<HomeScreen />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/products" element={<ProductScreen />} />
         <Route path="/works" element={<WorksScreen />} />
         <Route path="/feedback" element={<FeedbackScreen />} />
