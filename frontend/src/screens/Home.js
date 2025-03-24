@@ -166,7 +166,7 @@ const HomeScreen = () => {
           </div>
           <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
             <p>©<span>SAI ARTS</span> </p>
-            <p>Developed By Anand , Sojan</p>
+            <p>Hireus</p>
           </div>
         </div>
       </footer>
