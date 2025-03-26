@@ -75,6 +75,7 @@ const Navbar = () => {
 
           <Link to="/works" className={`${styles.hoverColor} transition`}>Works</Link>
           <Link to="/feedback" className={`${styles.hoverColor} transition`}>Feedback</Link>
+          <Link to="/dashboard" className={`${styles.hoverColor} transition`}>Dashboard</Link>
 
           {/* Theme Toggle Button */}
           <button 
@@ -89,7 +90,7 @@ const Navbar = () => {
             )}
           </button>
 
-          <Link to='/register'>
+          <Link to='/login'>
             <div className="flex flex-row px-10 items-center gap-2">
               <p className="font-bold">Sojan</p>
               <img className="w-10 h-auto rounded-xl" alt="profile" src="https://images.pexels.com/photos/14653174/pexels-photo-14653174.jpeg" />
@@ -149,12 +150,15 @@ const Navbar = () => {
 
           <Link to="/works" className={`${styles.textColor} ${styles.hoverColor} transition`} onClick={() => setIsOpen(false)}>Works</Link>
           <Link to="/feedback" className={`${styles.textColor} ${styles.hoverColor} transition`} onClick={() => setIsOpen(false)}>Feedback</Link>
+          <Link to="/dashboard" className={`${styles.textColor} ${styles.hoverColor} transition`} onClick={() => setIsOpen(false)}>Dashboard</Link>
           
-          {/* User profile in mobile menu */}
-          <Link to='/register' className="flex items-center gap-2 pt-4" onClick={() => setIsOpen(false)}>
+          
+          <Link to='/login' className="flex items-center gap-2 pt-4" onClick={() => setIsOpen(false)}>
             <p className="font-bold text-white">Sojan</p>
             <img className="w-8 h-auto rounded-xl" alt="profile" src="https://images.pexels.com/photos/14653174/pexels-photo-14653174.jpeg" />
           </Link>
+
+
         </div>
       </div>
     </nav>

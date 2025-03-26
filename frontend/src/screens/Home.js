@@ -5,6 +5,7 @@ import CustomPrintSteps from '../components/PriceFeature';
 import ContactSection from '../components/ContactUs';
 import { services } from '../Data/service';
 import OurService from '../components/OurService';
+import PriceListSection from '../components/PriceList';
 
 const HomeScreen = () => {
 
@@ -56,7 +57,7 @@ const HomeScreen = () => {
 
      
   
-<div className="py-20 bg-gray-50">
+{/* <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12 fade-in">
             Featured Designs
@@ -88,7 +89,9 @@ const HomeScreen = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
+      
+      <PriceListSection/>
       <div className="py-20 bg-[#1E3A8A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6 fade-in">Ready to Transform Your Look?</h2>
@@ -128,6 +131,7 @@ const HomeScreen = () => {
                 <li><a href="#" className="text-gray-400 hover:text-white transition">Products</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition">Services</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition">About Us</a></li>
+                <li><a href="/login" className="text-gray-400 hover:text-white transition">Admin login</a></li>
               </ul>
             </div>
             <div>

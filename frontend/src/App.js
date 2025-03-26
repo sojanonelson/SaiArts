@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import ContactInfo from './components/contact';
 import Register from './screens/Register';
 import Login from './screens/Login';
+import Dashboard from './screens/Dashboard';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/products" element={<ProductScreen />} />
         <Route path="/works" element={<WorksScreen />} />
         <Route path="/feedback" element={<FeedbackScreen />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
     </Router>
   );
