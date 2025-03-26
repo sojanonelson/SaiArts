@@ -91,18 +91,9 @@ const HomeScreen = () => {
         </div>
       </div> */}
       
-      <PriceListSection/>
-      <div className="py-20 bg-[#1E3A8A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6 fade-in">Ready to Transform Your Look?</h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto fade-in" style={{ transitionDelay: '0.2s' }}>
-            Let us help you create the perfect custom sticker art that reflects your unique style.
-          </p>
-          <button className="px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover:bg-indigo-50 transition duration-300 transform hover:-translate-y-1 fade-in" style={{ transitionDelay: '0.4s' }}>
-            Get Started Today
-          </button>
-        </div>
-      </div>
+    
+      
+      <CustomPrintSteps/>
 
     
  
@@ -113,7 +104,7 @@ const HomeScreen = () => {
 
       
      
-      <CustomPrintSteps/>
+     
       <ContactSection/>
 
    

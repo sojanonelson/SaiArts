@@ -1,34 +1,30 @@
 import React from "react";
-import { CheckCircle, PhoneCall, Printer, Truck } from "lucide-react";
+import { CheckCircle, User, PhoneCall, Printer } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const steps = [
   {
     icon: <CheckCircle size={40} className="text-yellow-500" />, 
-    title: "Select Product & Request a Quote",
-    description: "Choose your product & its variant and request a quote."
+    title: "Select Service & Enter Details",
+    description: "Choose your service and provide your name, phone number, and email."
   },
   {
     icon: <PhoneCall size={40} className="text-yellow-500" />, 
-    title: "Receive Quote & Confirm Details",
-    description: "We’ll contact you with a quote and confirm the job details."
+    title: "Service Team Contacts You",
+    description: "Our team will reach out to confirm your requirements and discuss further details."
   },
   {
     icon: <Printer size={40} className="text-yellow-500" />, 
-    title: "Printing Process Begins",
-    description: "Your custom print job is processed at our state-of-the-art facility in Pune, India."
-  },
-  {
-    icon: <Truck size={40} className="text-yellow-500" />, 
-    title: "Collect or Get it Shipped",
-    description: "Your custom print is ready! Collect it from our office or get it shipped."
+    title: "Processing Begins",
+    description: "Once confirmed, we proceed with the service as per your requirements."
   }
 ];
 
 const CustomPrintSteps = () => {
   return (
     <section className="bg-gray-100 py-12 px-6 text-center">
-      <h2 className="text-3xl font-bold mb-6">GET YOUR CUSTOM PRINT IN 4 EASY STEPS</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <h2 className="text-3xl font-bold mb-6">GET YOUR SERVICE IN 3 EASY STEPS</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {steps.map((step, index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
             {step.icon}
@@ -37,9 +33,12 @@ const CustomPrintSteps = () => {
           </div>
         ))}
       </div>
+      <Link to='/services'>
       <button className="mt-8 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">
-        View Our Prices
+        Get Started
       </button>
+      </Link>
+     
     </section>
   );
 };
