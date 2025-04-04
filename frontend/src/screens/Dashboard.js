@@ -10,7 +10,7 @@ import DashboardOverview from "./Overview";
 
 const Sidebar = () => {
   return (
-    <div className="w-64 h-screen bg-gray-900 text-white p-5">
+    <div className="w-64 h-screen bg-white text-white p-5">
       <h1 className="text-xl font-bold mb-5">Dashboard</h1>
       <nav>
         <ul className="space-y-4">

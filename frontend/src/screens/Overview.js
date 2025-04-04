@@ -1,25 +1,25 @@
 import React from 'react';
-import { 
-  LineChart, 
-  Line, 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer, 
-  PieChart, 
-  Pie, 
-  Cell 
+import {
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell
 } from 'recharts';
-import { 
-  DollarSign, 
-  Users, 
-  ShoppingCart, 
-  Activity, 
-  TrendingUp, 
-  TrendingDown 
+import {
+  DollarSign,
+  Users,
+  ShoppingCart,
+  Activity,
+  TrendingUp,
+  TrendingDown
 } from 'lucide-react';
 
 // Sample data for charts
@@ -73,28 +73,28 @@ const DashboardOverview = () => {
 
       {/* Metrics Grid */}
       <div className="grid md:grid-cols-4 gap-6 mb-8">
-        <MetricCard 
+        <MetricCard
           icon={DollarSign}
           title="Total Revenue"
           value="$124,567"
           change="+15.7%"
           positive={true}
         />
-        <MetricCard 
+        <MetricCard
           icon={Users}
           title="New Customers"
           value="1,254"
           change="+12.5%"
           positive={true}
         />
-        <MetricCard 
+        <MetricCard
           icon={ShoppingCart}
           title="Total Orders"
           value="987"
           change="-3.5%"
           positive={false}
         />
-        <MetricCard 
+        <MetricCard
           icon={Activity}
           title="Conversion Rate"
           value="3.8%"
@@ -115,17 +115,17 @@ const DashboardOverview = () => {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Line 
-                  type="monotone" 
-                  dataKey="revenue" 
-                  stroke="#8884d8" 
+                <Line
+                  type="monotone"
+                  dataKey="revenue"
+                  stroke="#8884d8"
                   strokeWidth={2}
                   name="Revenue"
                 />
-                <Line 
-                  type="monotone" 
-                  dataKey="profit" 
-                  stroke="#82ca9d" 
+                <Line
+                  type="monotone"
+                  dataKey="profit"
+                  stroke="#82ca9d"
                   strokeWidth={2}
                   name="Profit"
                 />
@@ -160,8 +160,8 @@ const DashboardOverview = () => {
           <div className="flex justify-center space-x-4 mt-4">
             {salesByCategoryData.map((category, index) => (
               <div key={index} className="flex items-center">
-                <span 
-                  className="inline-block w-3 h-3 mr-2 rounded-full" 
+                <span
+                  className="inline-block w-3 h-3 mr-2 rounded-full"
                   style={{ backgroundColor: COLORS[index % COLORS.length] }}
                 />
                 <span>{category.name}</span>
@@ -174,57 +174,59 @@ const DashboardOverview = () => {
       {/* Recent Activity */}
       <div className="bg-white rounded-lg shadow-md p-6 mt-8">
         <h2 className="text-xl font-semibold mb-6">Recent Activity</h2>
-        <table className="w-full text-left">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="p-3">Event</th>
-              <th className="p-3">Details</th>
-              <th className="p-3">Time</th>
-              <th className="p-3">Impact</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              { 
-                event: "New Sale", 
-                details: "Premium Laptop", 
-                time: "2 mins ago", 
-                impact: "+$1,299", 
-                type: "positive" 
-              },
-              { 
-                event: "Marketing Campaign", 
-                details: "Summer Sale Launched", 
-                time: "1 hour ago", 
-                impact: "+2.5k Visitors", 
-                type: "positive" 
-              },
-              { 
-                event: "Inventory", 
-                details: "Stock Running Low", 
-                time: "3 hours ago", 
-                impact: "-50 Units", 
-                type: "negative" 
-              },
-            ].map((activity, index) => (
-              <tr key={index} className="border-b hover:bg-gray-50">
-                <td className="p-3">{activity.event}</td>
-                <td className="p-3">{activity.details}</td>
-                <td className="p-3">{activity.time}</td>
-                <td className="p-3">
-                  <span className={`
-                    px-3 py-1 rounded-full text-xs font-semibold
-                    ${activity.type === 'positive' 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-red-100 text-red-800'}
-                  `}>
-                    {activity.impact}
-                  </span>
-                </td>
+        <div className="overflow-y-auto max-h-32">
+          <table className="w-full text-left">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="p-3">Event</th>
+                <th className="p-3">Details</th>
+                <th className="p-3">Time</th>
+                <th className="p-3">Impact</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {[
+                {
+                  event: "New Sale",
+                  details: "Premium Laptop",
+                  time: "2 mins ago",
+                  impact: "+$1,299",
+                  type: "positive"
+                },
+                {
+                  event: "Marketing Campaign",
+                  details: "Summer Sale Launched",
+                  time: "1 hour ago",
+                  impact: "+2.5k Visitors",
+                  type: "positive"
+                },
+                {
+                  event: "Inventory",
+                  details: "Stock Running Low",
+                  time: "3 hours ago",
+                  impact: "-50 Units",
+                  type: "negative"
+                },
+              ].map((activity, index) => (
+                <tr key={index} className="border-b hover:bg-gray-50">
+                  <td className="p-3">{activity.event}</td>
+                  <td className="p-3">{activity.details}</td>
+                  <td className="p-3">{activity.time}</td>
+                  <td className="p-3">
+                    <span className={`
+                      px-3 py-1 rounded-full text-xs font-semibold
+                      ${activity.type === 'positive'
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-red-100 text-red-800'}
+                    `}>
+                      {activity.impact}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
